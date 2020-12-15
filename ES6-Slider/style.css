@@ -1,0 +1,280 @@
+/* 
+============
+Font
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap");
+
+/* 
+============
+Variables
+============
+*/
+:root {
+    --clr-white: #fff;
+    --clr-light: #f3fbfb;
+    --clr-grey-1: #9fb3ba;
+    --clr-grey-2: #748388;
+    --clr-accent: rgb(100, 205, 226);
+    --clr-black: #222;
+    --font: "Commissioner", sans-serif;
+    --font-cursive: "Henny Penny", cursive;
+    --transition: all 0.3s ease-out;
+    --radius: 0.5rem;
+    --spacing: 0.2rem;
+    /* --shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1); */
+    --shadow: 0 0.25rem 1rem rgba(72, 165, 184, 0.6);
+    --bg-gradient: linear-gradient(
+        130deg,
+        #66ded3 0%,
+        25%,
+        #6ac2f0 50%,
+        52%,
+        #0e4969 100%
+    );
+}
+
+/* 
+============
+Global
+============
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--font);
+    /* background-color: #f1f5f8; */
+    background-color: var(--clr-black);
+    line-height: 1.5;
+    color: var(--clr-white);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-dark);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--clr-accent);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    color: var(--clr-accent);
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    /* margin: 2rem; */
+    padding: 1rem;
+    background: left / 320% auto var(--bg-gradient);
+    color: var(--clr-white);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: right / 320% auto var(--bg-gradient);
+    box-shadow: 0 0.5rem 1.5rem rgba(72, 165, 184, 0.1);
+}
+
+.underline {
+    width: 6rem;
+    height: 0.5rem;
+    background-color: var(--clr-accent);
+    margin: 0.5rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+.--section-centered {
+    width: 90vw;
+    max-width: 768px;
+    margin: 6rem auto 6rem;
+}
+
+/* 
+============
+Main
+============
+*/
+
+.slider {
+    position: relative;
+    text-align: center;
+}
+
+.slider h2 span {
+    color: var(--clr-accent);
+    margin-right: 1rem;
+}
+
+.slide-container {
+    width: 90vw;
+    max-width: 40rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 34rem;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.active {
+    overflow: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.next {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.last {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.img {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem auto;
+    border: 0.5rem solid var(--clr-white);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+.job {
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    margin-bottom: 2rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+@media screen and (min-width: 576px) {
+    .btn {
+        font-size: 1.75rem;
+        padding: 1rem;
+    }
+}
+
+.quote {
+    margin: 2.5rem auto;
+}
+
+.quote i {
+    font-size: 4rem;
+    color: var(--clr-accent);
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
