@@ -19,12 +19,14 @@ h1 {
 }
 
 .content {
+    min-height: 70vh;
     padding: 4rem 0;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, 18rem);
     grid-gap: 3rem 2rem;
     justify-content: center;
+    align-content: start;
 
     .card {
         padding: 2rem;
@@ -51,4 +53,42 @@ h1 {
             font-size: 0.875rem;
         }
     }
+}
+
+.active-btn {
+    background: $clr-accent;
+
+    &:hover {
+        background: $clr-accent;
+        border-color: transparent;
+        color: $clr-white;
+    }
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-btn {
+    margin: 0 0.5rem;
+    padding: 0;
+    width: 2.5rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.prev-btn,
+.next-btn {
+    border: none;
+    background: none;
+    color: $clr-black;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
 }
