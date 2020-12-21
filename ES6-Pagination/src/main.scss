@@ -1,0 +1,54 @@
+@import "./fonts";
+@import "./variables";
+@import "./global";
+@import "./utilities";
+
+// ============
+// MAIN STYLES
+// ============
+
+.--section-centered {
+    height: 100vh;
+    padding-top: 5rem;
+    max-width: 1248px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.content {
+    padding: 4rem 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 18rem);
+    grid-gap: 3rem 2rem;
+    justify-content: center;
+
+    .card {
+        padding: 2rem;
+        background: $clr-white;
+        border-radius: $radius;
+        box-shadow: $shadow;
+
+        .img {
+            margin: 1.5rem auto 0.5rem;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+        }
+
+        h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0 auto;
+            border-radius: 3rem;
+            font-size: 0.875rem;
+        }
+    }
+}

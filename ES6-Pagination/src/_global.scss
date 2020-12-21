@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: #f1f5f8;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-black;
+    transition: $transition;
+
+    &:hover {
+        color: $clr-accent;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    color: $clr-accent;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    /* margin: 2rem; */
+    padding: 0.5rem 1rem;
+    background: $clr-black;
+    color: $clr-white;
+    border: 3px solid transparent;
+    border-radius: $radius;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: $spacing;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background: transparent;
+        border-color: $clr-black;
+        color: $clr-black;
+    }
+}
+
+.underline {
+    width: 6rem;
+    height: 0.5rem;
+    background-color: $clr-accent;
+    margin: 0.5rem auto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.--section-centered {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
